@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ecf0f1;
+}
+
+header {
+  background-color:#008080;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+  font-size: 32px;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.color-palette {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.color-block {
+  width: 150px;
+  height: 150px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.color-block:hover {
+  transform: scale(1.1);
+}
+
+.color-block:after {
+  content: attr(data-color);
+  display: block;
+  margin-top: 5px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+}
+
+footer {
+  background-color: #008080;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+.copy-message {
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+background-color: #2ecc71;
+color: #fff;
+padding: 20px;
+font-size: 24px;
+display: none;
+z-index: 9999;
+}
+
+.copy-message.show {
+display: block;
+}
+
+@keyframes telegram-sound {
+0% {
+transform: scale(1);
+}
+50% {
+transform: scale(1.1);
+}
+100% {
+transform: scale(1);
+}
+}
+
+.telegram-sound {
+animation-name: telegram-sound;
+animation-duration: 0.3s;
+animation-timing-function: ease-in-out;
+animation-fill-mode: forwards;
+}
